@@ -7,5 +7,6 @@ jobs:
       - name: my-step
         run: |
              envid=260
-             echo https://api.boomi.com/api/rest/v1/EnvironmentExtensions/$"envId"
+             echo $envid
+             echo https://api.boomi.com/api/rest/v1/EnvironmentExtensions/$'envId'
             
