@@ -5,4 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: my-step
-        run: echo "Hello World!"
+        run: 
+            envid=260
+            get_extensions_apiCall=`curl  --request GET \
+            --header 'accept: application/json' \
+            --url 'https://api.boomi.com/api/rest/v1/neosalpha-SSL1AK/EnvironmentExtensions/$envId'`
+            
