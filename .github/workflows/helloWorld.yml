@@ -8,6 +8,6 @@ jobs:
         run: |
              envid="260"
              echo $envid
-             echo https://api.boomi.com/api/rest/v1/EnvironmentExtensions/$envId
+             echo https://api.boomi.com/api/rest/v1/EnvironmentExtensions/("$envId")
     
             
