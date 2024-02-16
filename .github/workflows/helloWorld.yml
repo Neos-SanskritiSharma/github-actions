@@ -18,4 +18,4 @@ jobs:
     steps:
       - name: my-step
         run: |
-          echo "https://api.boomi.com/api/rest/v1/EnvironmentExtensions/${{needs.get-job.outputs.envId}}"
+          echo 'https://api.boomi.com/api/rest/v1/EnvironmentExtensions/${{needs.get-job.outputs.envId}}'
