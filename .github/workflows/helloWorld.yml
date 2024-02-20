@@ -9,4 +9,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create File
-        run: echo "Hello, world!" > hello.txt
+        run: |
+              get_extensions_apiCall="hello world"
+                               
+
+                               
+                                current_date_time=$(TZ=Asia/Kolkata date)
+                                echo "Current date and time: $current_date_time" 
+                                echo $get_extensions_apiCall | python -c "import sys, json; print(json.dumps(json.load(sys.stdin), indent=2))" > boomi/Environment_Extensions_Snapshot/"$current_date_time".json
+                                git config --global user.name ashmita0708
+                                git config --global user.email ashmita.sawant@convexin.com
+                                git add .
+                                git commit -m "Extensions Snapshot Taken"
+                                git config pull.rebase false
+                                git push --force origin boomi  
+                                
+                                git push --force-with-lease origin boomi
+                                echo "success"
