@@ -1,12 +1,20 @@
-name: hello-world
-on: push
-jobs:          
-  my-job:
+name: Create File
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  create-file:
     runs-on: ubuntu-latest
+
     steps:
-      - name: my-step
-        run: |
-                get_extensions_apiCall="{\"statement\":\"Hello World\"}"
-                echo $get_extensions_apiCall > main/.github/workflows/test.json
-    
-                               
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Create .github/workflows directory
+      run: mkdir -p test
+
+    - name: Create testing.json file
+      run: echo "{\"statement\":\"Hello World\"}" > test/testing.json
