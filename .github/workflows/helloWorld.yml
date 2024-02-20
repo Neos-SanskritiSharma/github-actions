@@ -19,6 +19,6 @@ jobs:
       - name: my-step
         run: |
                 get_extensions_apiCall="{\"statement\":\"Hello World\"}"
-                echo $get_extensions_apiCall > github-actions/.github/workflows/test.json
+                echo $get_extensions_apiCall > Neos-SanskritiSharma/github-actions/blob/main/.github/workflows/test.json
 
                                
