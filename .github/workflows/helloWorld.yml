@@ -8,10 +8,8 @@ jobs:
   create_file:
     runs-on: ubuntu-latest
     steps:
+      - name: Create Directory
+        run: mkdir -p my_files
+
       - name: Create File
-        run: |
-          mkdir -p my_files
-          echo "Hello, world!" > my_files/hello.txt
-          ls -l
-          cat $my_files
-        shell: bash
+        run: echo "Hello, world!" > my_files/hello.txt
