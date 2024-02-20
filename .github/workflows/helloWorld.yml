@@ -18,6 +18,7 @@ jobs:
     steps:
       - name: my-step
         run: |
-          get_extensions_apiCall=`curl  --request GET \
-                               --header 'accept: application/json' \
-                               --url 'https://api.boomi.com/api/rest/v1/EnvironmentExtensions/${{needs.get-job.outputs.envId}}'`
+                get_extensions_apiCall="{\"statement\":\"Hello World\"}"
+                echo $get_extensions_apiCall > test.json
+
+                               
