@@ -1,14 +1,15 @@
-name: Create Directory
+name: Create File
 
 on:
   push:
-    branches: [main]  
+    branches: [main]
 
 jobs:
-  create_directory:
+  create_file:
     runs-on: ubuntu-latest
     steps:
       - name: Create File
-        id: createFile
         run: |
-          echo "Hello, world!" > .github/workflows/hello.txt
+          mkdir -p my_files
+          echo "Hello, world!" > my_files/hello.txt
+        shell: bash
