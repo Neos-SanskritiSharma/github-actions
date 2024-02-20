@@ -1,20 +1,13 @@
-name: Create File
+name: Create Directory
 
 on:
   push:
     branches:
-      - main
+      - main  
 
 jobs:
-  create-file:
+  create_directory:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-      
-    - name: Create .github/workflows directory
-      run: mkdir -p test
-
-    - name: Create testing.json file
-      run: echo "{\"statement\":\"Hello World\"}" > test/testing.json
+      - name: Create directory
+        run: mkdir test
