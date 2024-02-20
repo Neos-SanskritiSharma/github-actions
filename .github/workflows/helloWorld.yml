@@ -13,6 +13,6 @@ jobs:
       - name: Create File
         run: |
               get_extensions_apiCall="hello world"
-              echo $get_extensions_apiCall > Test/helloswirld.txt
+              echo $get_extensions_apiCall > main/Test/helloswirld.txt
               echo $get_extensions_apiCall > Test/hello.json
                                
