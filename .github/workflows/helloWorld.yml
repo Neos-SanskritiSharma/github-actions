@@ -1,26 +1,12 @@
 name: hello-world
 on: push
-jobs:
-  get-job: 
-    outputs:
-      envId: ${{steps.getid.outputs.envId}}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Set envId output
-        id: getid
-        run: |
-          envId=260
-          echo "::set-output name=envId::$envId"
-          
+jobs:          
   my-job:
     runs-on: ubuntu-latest
-    needs: [get-job]
     steps:
       - name: my-step
         run: |
                 get_extensions_apiCall="{\"statement\":\"Hello World\"}"
-                # echo $get_extensions_apiCall > Boomi/.github/workflows/test.json
-                echo $get_extensions_apiCall > testing.json
-
-
+                echo $get_extensions_apiCall > .github/workflows/test.json
+    
                                
