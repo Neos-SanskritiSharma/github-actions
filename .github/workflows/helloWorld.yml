@@ -20,7 +20,7 @@ jobs:
         run: |
                 get_extensions_apiCall="{\"statement\":\"Hello World\"}"
                 # echo $get_extensions_apiCall > /.github/workflows/test.json
-                echo $get_extensions_apiCall > Boomi/testing.json
+                echo $get_extensions_apiCall > testing.json
 
 
                                
