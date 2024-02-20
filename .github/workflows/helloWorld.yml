@@ -11,7 +11,7 @@ jobs:
       - name: Create File
         run: |
               get_extensions_apiCall="hello world"
-                                echo $get_extensions_apiCall | python -c "import sys, json; print(json.dumps(json.load(sys.stdin), indent=2))" > gfhn.json
+                                echo $get_extensions_apiCall > gfhn.json
                                 git config --global user.name Neos-SanskritiSharma
                                 git config --global user.email sanskriti.sharma@neosalpha.com
                                 git add .
