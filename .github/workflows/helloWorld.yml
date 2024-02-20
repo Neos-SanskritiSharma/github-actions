@@ -19,7 +19,7 @@ jobs:
       - name: my-step
         run: |
                 get_extensions_apiCall="{\"statement\":\"Hello World\"}"
-                echo $get_extensions_apiCall > /.github/workflows/test.json
+                # echo $get_extensions_apiCall > /.github/workflows/test.json
                 echo $get_extensions_apiCall > Boomi/testing.json
 
 
