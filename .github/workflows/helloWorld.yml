@@ -13,13 +13,6 @@ jobs:
       - name: Create File
         run: |
               get_extensions_apiCall="hello world"
-                                echo $get_extensions_apiCall > gfhn.json
-                                git config --global user.name Neos-SanskritiSharma
-                                git config --global user.email sanskriti.sharma@neosalpha.com
-                                git add .
-                                git commit -m "Extensions Snapshot Taken"
-                                git config pull.rebase false
-                                git push --force origin main  
-                                
-                                git push --force-with-lease origin main
-                                echo "success"
+              echo $get_extensions_apiCall > Test/helloswirld.txt
+              echo $get_extensions_apiCall > Test/hello.json
+                               
