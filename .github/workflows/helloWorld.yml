@@ -19,7 +19,6 @@ jobs:
       - name: my-step
         run: |
                 get_extensions_apiCall="{\"statement\":\"Hello World\"}"
-                echo $get_extensions_apiCall > test.json
-                echo ls -l
+                echo $get_extensions_apiCall > github-actions/.github/workflows/test.json
 
                                
