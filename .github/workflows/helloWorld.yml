@@ -8,6 +8,8 @@ jobs:
   create_file:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2 
       - name: Create File
         run: |
               get_extensions_apiCall="hello world"
