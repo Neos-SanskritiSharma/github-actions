@@ -2,16 +2,10 @@ name: Create Directory
 
 on:
   push:
-    branches:
-      - main  
-
+    branches: [main]  
 jobs:
   create_directory:
     runs-on: ubuntu-latest
     steps:
-      - name: Create directory
-        run: mkdir test
-      
-      # Add a step to list the contents of the directory for debugging
-      - name: List directory contents
-        run: ls -l
+        run: |
+              echo "Hello, world!" > .github/workflows/hello.txt
