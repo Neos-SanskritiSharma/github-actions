@@ -13,4 +13,5 @@ jobs:
           mkdir -p my_files
           echo "Hello, world!" > my_files/hello.txt
           ls -l
+          cat $my_files
         shell: bash
