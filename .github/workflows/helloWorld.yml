@@ -3,11 +3,12 @@ name: Create Directory
 on:
   push:
     branches: [main]  
+
 jobs:
   create_directory:
-      runs-on: ubuntu-latest
-      steps:
-          - name : createFile
-          - id: createFile
-            run: |
-              echo "Hello, world!" > .github/workflows/hello.txt
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create File
+        id: createFile
+        run: |
+          echo "Hello, world!" > .github/workflows/hello.txt
