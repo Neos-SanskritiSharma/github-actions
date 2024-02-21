@@ -4,8 +4,10 @@ on:
 jobs:
  create_file:
    runs-on: ubuntu-latest
-   if : $value == true
-   steps :
-       - name : dhakjd
-         run : echo $value
+   steps:
+   - name: get value
+     run : |
+         file="test"
+         new_value=$file.json
+         echo $new_value
                                
