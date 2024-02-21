@@ -6,6 +6,6 @@ jobs:
    runs-on: ubuntu-latest
    if : $value == true
    steps :
-       -name : dhakjd
-        run : echo $value
+       - name : dhakjd
+         run : echo $value
                                
