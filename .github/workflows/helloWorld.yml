@@ -1,21 +1,10 @@
 name: Create File
-
 on:
-  push:
-    branches: [main]
-
+  push
 jobs:
-  create_file:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2 
-      - name: Create File
-        run: |
-              get_extensions_apiCall="hello world"
-              echo $get_extensions_apiCall > Test/helloswirld.txt
-              echo $get_extensions_apiCall > Test/hello.json
-              git add .
-              git commit -m "Extensions Snapshot Taken"
-              
+ create_file:
+   runs-on: ubuntu-latest
+   steps:
+       - name: vhkjdsla
+         run: echo "adsf"              
                                
