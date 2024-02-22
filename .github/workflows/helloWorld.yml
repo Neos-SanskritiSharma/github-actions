@@ -11,4 +11,4 @@ jobs:
         id: set_value
         run: |
           file={"name":"djaj"}
-         result=$(echo "$file" | python -c "import sys, json; print(json.dumps(json.loads(sys.stdin.read()), indent=2))")
+          result=$(echo "$file" | python -c "import sys, json; print(json.dumps(json.loads(sys.stdin.read()), indent=2))")
