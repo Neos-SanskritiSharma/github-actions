@@ -10,4 +10,10 @@ jobs:
          file="test"
          new_value=$file.json
          echo $new_value
+   - name: Upload artifact
+     uses: actions/upload-artifact@v2
+     with:
+          name: json-data
+          path: boomi/Environment_Extensions_Snapshot/$new_value.json
+           
                                
