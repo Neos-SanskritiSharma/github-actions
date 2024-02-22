@@ -36,7 +36,7 @@ jobs:
             "extensionGroupId": "",
             "id": "d366c18f-94a1-4fab-9055-66994ba24219",
             "partial": true}'
-          CODE=$(curl -X POST \
+          echo (curl -X POST \
                               -H "Authorization:BOOMI_TOKEN.ashmita.sawant@convexin.com:3501e989-7851-4620-9948-cd2d7924b7b7 " \
                               -H "Accept: application/json" \
                               -H "Content-Type: application/json" \
