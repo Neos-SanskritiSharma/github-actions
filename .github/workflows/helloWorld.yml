@@ -1,19 +1,19 @@
 name: Create File
 on:
-  push
+  push:
+    branches:
+      - main
 jobs:
- create_file:
-   runs-on: ubuntu-latest
-   steps:
-   - name: get value
-     run : |
-         file="test"
-         new_value=$file.json
-         echo $new_value
-   - name: Upload artifact
-     uses: actions/upload-artifact@v2
-     with:
+  create_file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get value
+        run: |
+          file="test"
+          new_value="$file.json"
+          echo "$new_value"
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
           name: json-data
-          path: boomi/Environment_Extensions_Snapshot/$new_value
-           
-                               
+          path: boomi/Environment_Extensions_Snapshot/${{ new_value }}
