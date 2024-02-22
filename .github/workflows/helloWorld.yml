@@ -10,12 +10,5 @@ jobs:
       - name: get value
         id: set_value
         run: |
-          file="test"
-          new_value="$file.json"
-          echo "::set-output name=new_value::$new_value"
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: json-data
-          path: boomi/Environment_Extensions_Snapshot/${{ steps.set_value.outputs.new_value }}
+          file={"name":"djaj"}
+          result= $file | python -c "import sys, json; print(json.dumps(json.load(sys.stdin), indent=2))"
