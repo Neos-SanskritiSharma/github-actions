@@ -10,5 +10,11 @@ jobs:
       - name: get value
         id: set_value
         run: |
-          file={"name":"djaj"}
-          result=$(echo "$file" | python -c "import sys, json; print(json.dumps(json.loads(sys.stdin.read()), indent=2))")
+          envId=1234
+          CODE=$(curl -s -X POST \
+                              -H "Authorization: ${{secrets.BOOMI_API_AUTH}}" \
+                              -H "Accept: application/json" \
+                              -H "Content-Type: application/json" \
+                              -d "$request" \
+                              "https://api.boomi.com/api/rest/v1/EnvironmentExtensions/$envId/update")
+          echo "Response is : $CODE
