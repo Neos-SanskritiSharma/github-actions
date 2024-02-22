@@ -11,10 +11,5 @@ jobs:
         id: set_value
         run: |
           envId=1234
-          CODE=$(curl -s -X POST \
-                              -H "Authorization: ${{secrets.BOOMI_API_AUTH}}" \
-                              -H "Accept: application/json" \
-                              -H "Content-Type: application/json" \
-                              -d "$request" \
-                              "https://api.boomi.com/api/rest/v1/EnvironmentExtensions/$envId/update")
+          CODE=$(https://api.boomi.com/api/rest/v1/EnvironmentExtensions/$envId/update)
           echo "Response is : $CODE
