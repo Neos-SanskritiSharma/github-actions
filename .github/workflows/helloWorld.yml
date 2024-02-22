@@ -36,11 +36,6 @@ jobs:
             "extensionGroupId": "",
             "id": "d366c18f-94a1-4fab-9055-66994ba24219",
             "partial": true}'
-          echo (curl -X POST \
-                              -H "Authorization:BOOMI_TOKEN.ashmita.sawant@convexin.com:3501e989-7851-4620-9948-cd2d7924b7b7 " \
-                              -H "Accept: application/json" \
-                              -H "Content-Type: application/json" \
-                              -d "$request" \
-                              https://api.boomi.com/api/rest/v1/convexukserviceslimited-WN9RSJ/EnvironmentExtensions/$envId/update)
+             echo "$(https://api.boomi.com/api/rest/v1/convexukserviceslimited-WN9RSJ/EnvironmentExtensions/$envId/update)"
              echo "The response is : $CODE"
           echo $CODE
