@@ -14,6 +14,6 @@ jobs:
      uses: actions/upload-artifact@v2
      with:
           name: json-data
-          path: boomi/Environment_Extensions_Snapshot/${{new_value}}
+          path: boomi/Environment_Extensions_Snapshot/$new_value
            
                                
