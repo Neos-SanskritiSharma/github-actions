@@ -10,6 +10,8 @@ jobs:
      - name: Extract Filename
        run: |
          fileToRead=./boomi/DeploymentConfiguration/ExtensionsUpdateConfiguration/ProjectDetails.DPP.json
-         arrIN=(${fileToRead//// })
-         fileToRead=$(echo ${arrIN[5]})
-         echo "Filename is: $fileToRead"
+          echo "Original path: $fileToRead"
+          arrIN=(${fileToRead//// })
+          echo "Array contents: ${arrIN[@]}"
+          fileToRead=$(echo ${arrIN[5]})
+          echo "Filename is: $fileToRead"
