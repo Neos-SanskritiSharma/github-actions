@@ -10,5 +10,7 @@ jobs:
      - name: Extract Filename
        run: |
           fileToRead="./boomi/DeploymentConfiguration/ExtensionsUpdateConfiguration/ProjectDetails.DPP.json"
-          filename=$(basename "$fileToRead")
-          echo "Filename is: $filename"
+          arrIN=(${fileToRead//./ })
+              uniqueKey=$(echo ${arrIN[0]})
+              echo $uniqueKey
+              echo "::set-output name=uniqueKey::$uniqueKey"
